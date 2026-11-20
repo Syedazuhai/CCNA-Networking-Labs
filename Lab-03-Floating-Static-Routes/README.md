@@ -1,8 +1,8 @@
-\# CCNA Lab 03 — Floating Static Routes and Network Failover
+﻿# CCNA Lab 03 - Floating Static Routes and Network Failover
 
 
 
-\## Project Overview
+## Project Overview
 
 
 
@@ -14,7 +14,7 @@ The aim was to design and configure a network with a primary route and an altern
 
 
 
-\## Network Topology
+## Network Topology
 
 
 
@@ -22,23 +22,23 @@ The network consists of:
 
 
 
-\- 3 Cisco 2911 routers (R1, R2 and R3)
+- 3 Cisco 2911 routers (R1, R2 and R3)
 
-\- 2 Cisco 2960 switches
+- 2 Cisco 2960 switches
 
-\- 2 PCs
+- 2 PCs
 
-\- A primary connection between R1 and R2
+- A primary connection between R1 and R2
 
-\- An alternative path through R3
-
-
-
-!\[Network Topology](screenshots/01\_Network\_Topology.png)
+- An alternative path through R3
 
 
 
-\## IP Addressing
+![Network Topology](screenshots/01_Network_Topology.png)
+
+
+
+## IP Addressing
 
 
 
@@ -68,11 +68,11 @@ The network consists of:
 
 
 
-\## Routing Configuration
+## Routing Configuration
 
 
 
-\### Primary Static Route — R1
+### Primary Static Route - R1
 
 
 
@@ -84,7 +84,7 @@ ip route 192.168.20.0 255.255.255.0 10.0.0.2 1
 
 
 
-\### Floating Backup Route — R1
+### Floating Backup Route - R1
 
 
 
@@ -108,11 +108,11 @@ Equivalent primary and backup routes were configured on R2 for the return path.
 
 
 
-\## Testing and Verification
+## Testing and Verification
 
 
 
-\### Test 1 — Normal Network Operation
+### Test 1 - Normal Network Operation
 
 
 
@@ -120,11 +120,11 @@ Verified connectivity between PC1 and PC2 while the primary route was active.
 
 
 
-!\[Primary Route](screenshots/02\_Primary\_Route\_AD1.png)
+![Primary Route](screenshots/02_Primary_Route_AD1.png)
 
 
 
-\### Test 2 — Primary Link Failure
+### Test 2 - Primary Link Failure
 
 
 
@@ -146,11 +146,11 @@ The routing table showed the floating static route with AD 120 via R3.
 
 
 
-!\[Backup Route](screenshots/03\_Backup\_Route\_AD120.png)
+![Backup Route](screenshots/03_Backup_Route_AD120.png)
 
 
 
-\### Test 3 — Verify Alternative Path
+### Test 3 - Verify Alternative Path
 
 
 
@@ -166,11 +166,11 @@ tracert 192.168.20.10
 
 
 
-!\[Backup Path Traceroute](screenshots/04\_Backup\_Path\_Traceroute.png)
+![Backup Path Traceroute](screenshots/04_Backup_Path_Traceroute.png)
 
 
 
-\### Test 4 — Restore Primary Connection
+### Test 4 - Restore Primary Connection
 
 
 
@@ -192,11 +192,11 @@ Verified that the primary static route with AD 1 returned to the routing table.
 
 
 
-!\[Automatic Recovery](screenshots/05\_Automatic\_Recovery.png)
+![Automatic Recovery](screenshots/05_Automatic_Recovery.png)
 
 
 
-\## Results
+## Results
 
 
 
@@ -212,29 +212,29 @@ After restoring the primary connection, the router returned to the preferred rou
 
 
 
-\## Skills Developed
+## Skills Developed
 
 
 
-\- Cisco IOS CLI configuration
+- Cisco IOS CLI configuration
 
-\- IPv4 addressing and subnetting
+- IPv4 addressing and subnetting
 
-\- Static and floating static routing
+- Static and floating static routing
 
-\- Administrative distance
+- Administrative distance
 
-\- Network redundancy and failover
+- Network redundancy and failover
 
-\- Ping and traceroute troubleshooting
+- Ping and traceroute troubleshooting
 
-\- Routing table verification
+- Routing table verification
 
-\- Technical documentation
+- Technical documentation
 
 
 
-\## Tools Used
+## Tools Used
 
 
 
@@ -242,7 +242,7 @@ Cisco Packet Tracer and Cisco IOS CLI.
 
 
 
-\## Conclusion
+## Conclusion
 
 
 
@@ -251,4 +251,6 @@ This project improved my practical understanding of how floating static routes p
 
 
 It also strengthened my confidence in troubleshooting routing problems, testing network connectivity and verifying configuration changes.
+
+
 
